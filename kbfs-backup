@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+function date {
+    date --utc +%Y%m%d_%H%M%SZ
+}
+
+keybase_username={your-keybase-username}
+archive="backup-$(date).tar.gz"
+tar -czvf "$HOME/$archive" "$HOME/photos"
+mkdir -p "/keybase/private/$keybase_username/backups/"
+mv "$HOME/$archive" "/keybase/private/$keybase_username/backups/$archive"
