@@ -1,2 +1,2 @@
 # kbfs-backup
-simple backup script
+simple backup script using Keybase
