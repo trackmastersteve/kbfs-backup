@@ -1,0 +1,6 @@
+[Unit]
+Requires=keybase.service kbfs.service keybase-redirector.service
+Description=make a backup of my photos
+
+[Service]
+ExecStart=%h/scripts/run-kbfs-backup
